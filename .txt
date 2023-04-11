@@ -11,6 +11,11 @@ Conjunto de práticas usados junto com TDD
 Tem uma relação mais próxima com a area de negócios
 *Detalhar 
 
+
+seed 
+npm run seed
+npm i -D faker        biblioteca para criar dados falsos
+
 Projeto 
 
 #Story: Renting a car
