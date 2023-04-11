@@ -12,7 +12,7 @@ Tem uma relação mais próxima com a area de negócios
 *Detalhar 
 
 
-seed 
+seed é um padrão para gerar base de dados
 npm run seed
 npm i -D faker        biblioteca para criar dados falsos
 
