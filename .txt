@@ -16,6 +16,11 @@ seed é um padrão para gerar base de dados
 npm run seed
 npm i -D faker        biblioteca para criar dados falsos
 
+restaurar as dependencias sem ter problemas de versão npm ci
+
+*A camda service é responsável pelas regras de negócios
+*Quando chagar na parte criação da pasta unitTest baixar o mocha,  nyc e o sinon npm i -D mocha@8 nyc@15 sinon@9
+
 Projeto 
 
 #Story: Renting a car
@@ -32,7 +37,7 @@ When I check if there's a car available
 
 Then it should choose randomly a car from the category chosen
 
-
+Primeiro criar a estrutura, as camadas para depois começar a escrever so códigos
 ## Use Case 02
 
 As a system user
