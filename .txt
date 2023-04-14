@@ -19,7 +19,7 @@ npm i -D faker        biblioteca para criar dados falsos
 restaurar as dependencias sem ter problemas de versão npm ci
 
 *A camda service é responsável pelas regras de negócios
-*Quando chagar na parte criação da pasta unitTest baixar o mocha,  nyc e o sinon npm i -D mocha@8 nyc@15 sinon@9
+*Quando chagar na parte criação da pasta unitTest baixar o mocha,  nyc e o sinon npm i -D mocha@8 nyc@15 sinon@9 n
 
 Projeto 
 
