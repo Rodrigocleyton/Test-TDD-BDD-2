@@ -21,6 +21,12 @@ class CarService {
         )
     }
 
+    chooseRandomCar(carCategory) {
+        const randomCarIndex = this.getRandomPositionFromArray(carCategory.carIds)
+        //
+        const carId = carCategory.carIds[randomCarIndex]
+        return carId
+    }
     async getAvailableCar(carCategory) {
         return null
     }
