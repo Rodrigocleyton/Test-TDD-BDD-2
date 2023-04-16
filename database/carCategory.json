@@ -1,1 +1,12 @@
-[{"id":"2307473d-ddc0-4f22-a061-d75d59d417c0","name":"Convertible","carIds":["68b15882-c999-4fec-8cd0-c7346401c1e9","af7dd08b-2db8-4004-9b07-2fb355581b04","14d86a63-e23f-4f73-9067-8cb5f8e838ea"],"price":"70.35"}]
+[
+    {
+        "id": "c2038653-cd84-4e2c-95c0-ade0f8f719e0",
+        "name": "Passenger Van",
+        "carIds": [
+            "eaa2dbe3-1688-4717-af39-f25a9a527e20",
+            "f7fb4297-34d6-404c-b2f6-06c6087fa109",
+            "ad950f06-857e-4081-b648-d26b5fbb777a"
+        ],
+        "price": "43.66"
+    }
+]

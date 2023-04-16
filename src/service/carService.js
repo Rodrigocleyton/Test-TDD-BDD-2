@@ -3,8 +3,8 @@ const BaseRepository = require('./../repository/base/baseRepository')
 //criação da classe
 
 class CarService {
-    constructor({car}) {
-        this.carRepository = new BaseRepository({ file:car })
+    constructor({cars}) {
+        this.carRepository = new BaseRepository({ file:cars })
     }
     test(){
         return this.carRepository.find()

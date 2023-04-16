@@ -2,8 +2,10 @@ const faker = require('faker')
 const Car = require("./../src/entities/car")
 const CarCategory = require("./../src/entities/carCategory")
 const Customer = require("./../src/entities/customer")
-const { join } = require ('path')
+
+const { join } = require('path')
 const { writeFile } = require('fs/promises')
+
 //é onde serão salvos os datos gerados
 const seederBaseFolder = join(__dirname, "../", "database")
 const ITENS_AMOUNT = 2
@@ -36,12 +38,12 @@ for(let index = 0; index <= ITENS_AMOUNT; index++ ) {
         age: faker.datatype.number({min: 18 , max: 50})
 
     })
-
     customers.push(customer)
 }
 
 //recebe um filename e os dados. seederBase é o "BD"
-const write = (filename, data ) => writeFile(join(seederBaseFolder, filename), JSON.stringify(data))
+const write = (filename, data ) => writeFile(join(seederBaseFolder, filename), 
+JSON.stringify(data))
 
 
 ;(async () =>{
@@ -51,7 +53,7 @@ const write = (filename, data ) => writeFile(join(seederBaseFolder, filename), J
 
     console.log('cars', cars)
     console.log('customers', customers)
-    console.log('carCategory', cars)
+    console.log('carCategory', carCategory)//ou car?
 
 })()
 

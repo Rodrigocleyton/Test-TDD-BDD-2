@@ -1,3 +1,4 @@
+//Está camada faz a troca de informações com o BD
 const { readFile} = require("fs/promises")
 class BaseRepository {
     constructor({file}) {
