@@ -23,12 +23,15 @@ class CarService {
 
     chooseRandomCar(carCategory) {
         const randomCarIndex = this.getRandomPositionFromArray(carCategory.carIds)
-        //
-        const carId = carCategory.carIds[randomCarIndex]
+        //peaga o indice
+        const carId = carCategory.carIds[randomCarIndex]//o car selecionado será o index que retornou dessa função
         return carId
     }
     async getAvailableCar(carCategory) {
-        return null
+        //escolhe um carro dinamicamente
+        const carId = this.chooseRandomCar(carCategory)
+        const car = await this.carRepository.find(carId)
+        return car
     }
 }
 

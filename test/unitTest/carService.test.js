@@ -54,20 +54,33 @@ describe('carService Suite Tests', () => {
             carService.getRandomPositionFromArray.name
         ).returns(carIndex)//quando chamar retornará 0
 
-
         const result = carService.chooseRandomCar(carCategory)
         const expected = carCategory.carIds[carIndex]//espera que pegar o id 0
+        
+        //verifica se getRandomPosition foi chamado apenas 1 vez
+        expect(carService.getRandomPositionFromArray.calledOnce).to.be.ok
         expect(result).to.be.equal(expected)
 
     })
-    /*
+    
     //deverá retornar um carro disponível
     it('given a carCategory it should return an available car ', async () => {
         const car = mocks.validCar
         //cria uma instância imutável para não afetar os outros testes, não vai modificar o objeto pai
         const carCategory = Object.create(mocks.validCarCategory)
-        carCategory.ids = [car.id]
+        carCategory.carIds = [car.id]
 
+        //para não precisar de serviços externos para validar
+        sandbox.stub(
+            carService.carRepository,
+            carService.carRepository.find.name//.name retorna o nome da função
+        ).resolves(car)
+
+        //confere se a função foi chamada conforme o esperado
+        sandbox.spy(
+            carService,
+            carService.chooseRandomCar.name
+        )
 
         const customer = mocks.validCustomer
 
@@ -76,7 +89,9 @@ describe('carService Suite Tests', () => {
 
         //assert.deepStrictEqual(result, expected)
         //console.log('result', result)
-        expected(result).to.be.deep.equal(expected)
+        expect(carService.chooseRandomCar.calledOnce).to.be.ok
+        //expect(carService.carRepository.find.calledWithExactly(car.id)).to.be.ok
+        expect(result).to.be.deep.equal(expected)
     })
-    */
+    
 })
